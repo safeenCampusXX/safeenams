@@ -1,6 +1,7 @@
-flask
+Flask
 flask-cors
-supabase
 python-dotenv
+Pillow
+supabase
 gunicorn
 
