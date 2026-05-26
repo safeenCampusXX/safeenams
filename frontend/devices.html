@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusXX — Devices</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo">CXX</div>
+        <div class="brand-name">CampusXX</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="books.html">Books</a>
+        <a href="notes.html">Notes</a>
+        <a href="devices.html">Devices</a>
+        <a href="add.html" style="background: rgba(124,58,237,.12); border:1px solid rgba(124,58,237,.22)">Add Product</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span style="display:block; width:22px; height:2px; background:#0b1220; margin:4px 0"></span>
+        <span style="display:block; width:22px; height:2px; background:#0b1220; margin:4px 0"></span>
+        <span style="display:block; width:22px; height:2px; background:#0b1220; margin:4px 0"></span>
+      </button>
+
+      <button id="themeToggle" class="btn btn-ghost" style="padding:10px 12px; border-radius:14px;">🌓</button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="links">
+        <a href="books.html">Books</a>
+        <a href="notes.html">Notes</a>
+        <a href="devices.html">Devices</a>
+        <a href="add.html">Add Product</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Used devices, sold by students</h1>
+      <p>Laptops, calculators, tablets, and more.</p>
+    </section>
+
+    <section class="controls">
+      <div class="search">
+        <span aria-hidden="true">🔎</span>
+        <input id="searchInput" type="text" placeholder="Search devices (name, type, description)..." />
+      </div>
+      <select class="select" id="typeFilter">
+        <option value="">All types</option>
+        <option value="laptop">Laptop</option>
+        <option value="calculator">Calculator</option>
+        <option value="headphones">Headphones</option>
+        <option value="tablet">Tablet</option>
+        <option value="monitor">Monitor</option>
+      </select>
+      <select class="select" id="conditionFilter">
+        <option value="">All conditions</option>
+        <option value="new">New</option>
+        <option value="like_new">Like new</option>
+        <option value="good">Good</option>
+        <option value="used">Used</option>
+      </select>
+    </section>
+
+    <div id="status" class="controls" style="justify-content:center; margin-top:0"></div>
+    <section class="grid" id="cards"></section>
+  </main>
+
+<script>
+    window.API_BASE_URL = 'API_BASE_URL';
+  </script>
+  <script type="module" src="assets/js/devices.js"></script>
+</body>
+</html>
+
+

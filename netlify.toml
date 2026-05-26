@@ -1,0 +1,7 @@
+# Netlify static-site config (optional)
+# Frontend is plain HTML/JS, so basic headers are enough.
+
+[build]
+  publish = "frontend"
+  command = "echo 'Netlify build: static HTML" 
+

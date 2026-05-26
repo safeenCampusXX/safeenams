@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusXX</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo">CXX</div>
+        <div class="brand-name">CampusXX</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="books.html">Books</a>
+        <a href="notes.html">Notes</a>
+        <a href="devices.html">Devices</a>
+        <a href="add.html" style="background: rgba(124,58,237,.12); border:1px solid rgba(124,58,237,.22)">Add Product</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span style="display:block; width:22px; height:2px; background:#0b1220; margin:4px 0"></span>
+        <span style="display:block; width:22px; height:2px; background:#0b1220; margin:4px 0"></span>
+        <span style="display:block; width:22px; height:2px; background:#0b1220; margin:4px 0"></span>
+      </button>
+
+      <button id="themeToggle" class="btn btn-ghost" style="padding:10px 12px; border-radius:14px;">🌓</button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="links">
+        <a href="books.html">Books</a>
+        <a href="notes.html">Notes</a>
+        <a href="devices.html">Devices</a>
+        <a href="add.html">Add Product</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" style="padding-top:30px">
+      <h1>Campus marketplace, made for students</h1>
+      <p>Buy, sell, and share academic essentials—books, notes, and devices.</p>
+    </section>
+
+    <section class="grid" style="margin-top:18px">
+      <a class="card" href="books.html" style="text-decoration:none">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=60" alt="Books" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Books</h3>
+          <div class="card-meta">Find textbooks & sell your old ones.</div>
+        </div>
+        <div class="card-actions">
+          <span class="btn btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <a class="card" href="notes.html" style="text-decoration:none">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1553777097-6f0f0c8f9e7a?auto=format&fit=crop&w=900&q=60" alt="Notes" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Notes</h3>
+          <div class="card-meta">Preview and view study notes.</div>
+        </div>
+        <div class="card-actions">
+          <span class="btn btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <a class="card" href="devices.html" style="text-decoration:none">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=60" alt="Devices" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Devices</h3>
+          <div class="card-meta">Laptops, tablets, and more—used & fair.</div>
+        </div>
+        <div class="card-actions">
+          <span class="btn btn-primary">Explore</span>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    window.API_BASE_URL = 'API_BASE_URL';
+  </script>
+  <script type="module">
+    import { initTheme } from './assets/js/common.js';
+    initTheme();
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('open'));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+    }
+  </script>
+</body>
+</html>
+
